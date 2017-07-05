@@ -20,15 +20,11 @@
             top:50%; /*距顶部50%*/
         }
 
-        .position-img
-        {
-            position: relative;
-        }
         .position-text
         {
             position: absolute;
-            top:33%;
-            left: 22%;
+            top:30%;
+            left: 33%;
         }
         .postion-log
         {
@@ -37,7 +33,7 @@
             right: 0;
             margin:15% 0 ;
             width: 100% ;
-            
+
 
         }
         input{
@@ -48,10 +44,6 @@
             width: 330px;height: 30px;
             outline: none;
         }
-        img{
-            width: 100%;
-
-        }
 
     </style>
 </head>
@@ -59,19 +51,19 @@
 <div class="container center">
     <div class="row">
         <div class="col-xs-12 col-sm-5 col-sm-offset-1" >
-            <img src="../images/登陆/用户灰.png" class="position-img" id="user">
-            <input type="text" class="position-text" name="user"
+            <img src="../images/登陆/用户灰.png" class="img-responsive center-block " id="user">
+            <input type="text"  name="user"class="position-text"
                     onfocus="userselect()" onblur="userunselect()">
         </div>
 
         <div class="col-xs-12 col-sm-5">
-            <img src="../images/登陆/密码灰.png"  class="position-img" id="psw" >
-            <input type="password" class="position-text" name="password"
+            <img src="../images/登陆/密码灰.png"  class="img-responsive center-block" id="psw" >
+            <input type="password" class="position-text " name="password"
                     onfocus="pswselect()" onblur="pswunselect()">
         </div>
 
         <div class="col-xs-12 col-sm-1 position-img ">
-            <button type="button" class="btn btn-primary btn-lg btn postion-log ">登  录</button>
+            <button type="button" class="btn btn-info btn-lg postion-log ">登  录</button>
         </div>
     </div>
 </div>
