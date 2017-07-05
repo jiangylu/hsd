@@ -19,10 +19,18 @@
             position:absolute; /*绝对定位*/
             top:50%; /*距顶部50%*/
         }
+        .check{
+            position:absolute; /*绝对定位*/
+            color:white;
+            font-size: larger;
+            top:30%;
+            left: 50%;
+        }
 
         .position-text
         {
             position: absolute;
+
             top:30%;
             left: 33%;
         }
@@ -45,33 +53,41 @@
             outline: none;
         }
 
+
     </style>
 </head>
 <body>
 <div class="container center">
+    <form name="myform"method="post" onSubmit="return checklogin()">
     <div class="row">
         <div class="col-xs-12 col-sm-5 col-sm-offset-1" >
             <img src="../images/登陆/用户灰.png" class="img-responsive center-block " id="user">
-            <input type="text"  name="user"class="position-text"
-                    onfocus="userselect()" onblur="userunselect()">
+            <input type="text" required="required"  name="usr"class="position-text"
+                    onfocus="userselect()" onblur="userunselect()" >
         </div>
 
         <div class="col-xs-12 col-sm-5">
             <img src="../images/登陆/密码灰.png"  class="img-responsive center-block" id="psw" >
-            <input type="password" class="position-text " name="password"
+            <input type="password"  required="required" class="position-text " name="password"
                     onfocus="pswselect()" onblur="pswunselect()">
         </div>
 
         <div class="col-xs-12 col-sm-1 position-img ">
-            <button type="button" class="btn btn-info btn-lg postion-log ">登  录</button>
+            <button type="submit"   class="btn btn-info btn-lg postion-log ">登  录</button>
         </div>
+        <!--<div class="col-xs-12 col-sm-12  ">-->
+            <!--<p class="check" id="ch"></p>-->
+        <!--</div>-->
     </div>
+
+        <form>
 </div>
 <script>
     function userselect()
     {
         var img=document.getElementById("user");
         img.src='../images/登陆/用户蓝.png';
+
     }
 </script>
 <script>
@@ -95,5 +111,32 @@
         img.src='../images/登陆/密码灰.png';
     }
 </script>
+<!--<script>
+    function checklogin()
+    {
+        if((myform.usr.value!=""))
+        {
+            if((myform.psw.value!=""))
+            {
+                return true
+            }
+            else
+            {
+
+                document.getElementById("ch").innerHTML="密码不能为空!";
+
+                return false
+            }
+        }
+        else
+        {
+
+            document.getElementById("ch").innerHTML="用户名不能为空";
+            return false
+        }
+    }
+
+</script>
+-->
 </body>
 </html>
