@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>登录</title>
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../jquery/jquery-3.2.1.min.js"></script>
+    <style>
+        body
+        {  background-image: url("../images/登陆/u0.jpg") ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .center {
+            position:absolute; /*绝对定位*/
+            top:50%; /*距顶部50%*/
+        }
+
+        .position-img
+        {
+            position: relative;
+        }
+        .position-text
+        {
+            position: absolute;
+            top:33%;
+            left: 22%;
+        }
+        .postion-log
+        {
+            position: absolute;
+
+            right: 0;
+            margin:15% 0 ;
+            width: 100% ;
+            
+
+        }
+        input{
+            background-color: transparent;
+            color:white;
+            font-size: larger;
+            border: none ;
+            width: 330px;height: 30px;
+            outline: none;
+        }
+        img{
+            width: 100%;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="container center">
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-sm-offset-1" >
+            <img src="../images/登陆/用户灰.png" class="position-img" id="user">
+            <input type="text" class="position-text" name="user"
+                    onfocus="userselect()" onblur="userunselect()">
+        </div>
+
+        <div class="col-xs-12 col-sm-5">
+            <img src="../images/登陆/密码灰.png"  class="position-img" id="psw" >
+            <input type="password" class="position-text" name="password"
+                    onfocus="pswselect()" onblur="pswunselect()">
+        </div>
+
+        <div class="col-xs-12 col-sm-1 position-img ">
+            <button type="button" class="btn btn-primary btn-lg btn postion-log ">登  录</button>
+        </div>
+    </div>
+</div>
+<script>
+    function userselect()
+    {
+        var img=document.getElementById("user");
+        img.src='../images/登陆/用户蓝.png';
+    }
+</script>
+<script>
+    function pswselect()
+    {
+        var img=document.getElementById("psw");
+        img.src='../images/登陆/密码蓝.png';
+    }
+</script>
+<script>
+    function userunselect()
+    {
+        var img=document.getElementById("user");
+        img.src='../images/登陆/用户灰.png';
+    }
+</script>
+<script>
+    function pswunselect()
+    {
+        var img=document.getElementById("psw");
+        img.src='../images/登陆/密码灰.png';
+    }
+</script>
+</body>
+</html>
